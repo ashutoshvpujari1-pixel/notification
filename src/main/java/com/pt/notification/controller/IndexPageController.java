@@ -6,8 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.pt.notification.NotificationApplication;
-
 //This will instruct Spring that this class process web view
 @Controller 
 public class IndexPageController {

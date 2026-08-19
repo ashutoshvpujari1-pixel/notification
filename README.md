@@ -41,6 +41,14 @@ gradle -version
 
 git --version
 
+
+------------------------------------------------------------------------------------------------------------------------------
+**How to run this application:**
+From Eclipse, select below class (contains main() method). Right click this class and select **Run As -> Java Application**.
+com.pt.notification.NotificationApplication
+
+------------------------------------------------------------------------------------------------------------------------------
+
 ------------------------------------------------------------------------------------------------------------------------------
 **Running API URL:**
 Once you run this spring boot application within Eclipse, you can test using below API URL's from Browser:

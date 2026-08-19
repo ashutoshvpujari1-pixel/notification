@@ -43,6 +43,8 @@ git --version
 
 
 
+------------------------------------------------------------------------------------------------------------------------------
+
 **How to run this application:**
 
 From Eclipse, select below class (contains main() method). Right click this class and select **Run As -> Java Application**.
@@ -96,3 +98,5 @@ You need to create below folder. This logging folder path is defined in applicat
 **C://notification//logs**
 
 **notification.log** will be created in above folder. This log file will contain all debug, info, error etc messages written by the application.
+
+---------------------------------------------------------------------------------------------------------------------------------

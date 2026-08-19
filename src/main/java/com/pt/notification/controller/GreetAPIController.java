@@ -15,7 +15,7 @@ public class GreetAPIController {
 
     @GetMapping("/greet")
     public String sayGoodMorning(@RequestParam(value = "name", defaultValue = "Ashutosh") String name) {
-    	logger.info("main method started..");
+    	logger.info("sayGoodMorning method started..");
         return String.format("Good Morning %s", name);
     }
 }

@@ -1,9 +1,10 @@
 # notification
 
 This project demonstrates usage of 
-  spring boot
-  REST API 
-  logging cofiguration
+  spring boot,
+  REST API,
+  Web app,
+  logging cofiguration (usage of logger)
 It's gradle based project.
 
 

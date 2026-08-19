@@ -88,3 +88,11 @@ Below will be output for URL **http://localhost:8080/welcome**
 **welcome.html file output will be displayed on the browser**
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+**Logging Information:**
+
+You need to create below folder. This logging folder path is defined in application.properties (under src/main/resources folder).
+
+**C://notification//logs**
+
+**notification.log** will be created in above folder. This log file will contain all debug, info, error etc messages written by the application.

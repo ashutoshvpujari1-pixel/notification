@@ -4,7 +4,8 @@ This project demonstrates usage of
   spring boot,
   REST API,
   Web app,
-  logging cofiguration (usage of logger).
+  logging cofiguration (usage of logger),
+  error page configuration.
 
 It's gradle based project.
 

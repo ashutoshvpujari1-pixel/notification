@@ -55,6 +55,7 @@ Below will be output for URL **http://localhost:8080/greet**
 Below will be output for URL **http://localhost:8080/greet?name=Amit**
 
 **Good Morning Amit**
+
 ---------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------------------------------
@@ -74,4 +75,5 @@ Below will be output for URL **http://localhost:8080/index**
 Below will be output for URL **http://localhost:8080/welcome**
 
 **welcome.html file output will be displayed on the browser**
+
 ---------------------------------------------------------------------------------------------------------------------------------

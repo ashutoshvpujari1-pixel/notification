@@ -15,7 +15,7 @@ This project demonstrates usage of
   error page configuration.
 
 
-It's gradle based project.
+It's Spring Boot Gradle based project.
 
 
 Initial Spring boot Code is generated from below site:

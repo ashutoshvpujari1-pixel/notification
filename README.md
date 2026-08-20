@@ -108,3 +108,15 @@ You need to create below folder. This logging folder path is defined in applicat
 **notification.log** will be created in above folder. This log file will contain all debug, info, error etc messages written by the application.
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+Once application is running, we can access the following URL's to check health, metrics of application (this feature is implemented using Spring Actuator) 
+
+http://localhost:8080/actuator: The base path discovery page that displays all available endpoints.
+
+http://localhost:8080/actuator/health: This URL Shows basic application status (UP, DOWN).
+
+http://localhost:8080/actuator/metrics: This URL lists available system and application performance metrics (e.g., JVM memory, CPU usage).
+
+http://localhost:8080/actuator/metrics/system.cpu.count: This URL fetches details for a specific individual metric.
+
+http://localhost:8080/actuator/info: Displays the custom metadata specified in your properties file.

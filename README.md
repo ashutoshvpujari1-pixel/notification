@@ -5,6 +5,7 @@ This project demonstrates usage of
   REST API,
   Web app,
   logging cofiguration (usage of logger),
+  security for authentication,
   error page configuration.
 
 It's gradle based project.

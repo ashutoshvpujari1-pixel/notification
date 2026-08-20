@@ -13,8 +13,8 @@ public class WelcomePageController {
 	static Logger logger = LoggerFactory.getLogger(WelcomePageController.class);
 	
 	@GetMapping("/welcome")
-    public String displayIndexPage(Model model) {
-		logger.info("displayIndexPage started..");
+    public String displayWelcomePage(Model model) {
+		logger.info("displayWelcomePage started..");
         return "welcome"; // This will look for a html file named welcome.html
     }
 }

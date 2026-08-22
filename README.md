@@ -120,3 +120,10 @@ http://localhost:8080/actuator/metrics: This URL lists available system and appl
 http://localhost:8080/actuator/metrics/system.cpu.count: This URL fetches details for a specific individual metric.
 
 http://localhost:8080/actuator/info: Displays the custom metadata specified in your properties file.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Added ApplicationStartupController. In this class, run method, you can implement application start up related logic
+that needs to be executed after start of server.
+
+---------------------------------------------------------------------------------------------------------------------------------

@@ -127,3 +127,6 @@ Added ApplicationStartupController. In this class, run method, you can implement
 that needs to be executed after start of server.
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+Use below URL to test Spring ai module which invokes open ai LLM
+http://localhost:8080/api/ai/chat

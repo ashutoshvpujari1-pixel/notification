@@ -18,11 +18,18 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+    springAiVersion = '2.0.0'
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-h2console'
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'	
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'	
+	implementation platform("org.springframework.ai:spring-ai-bom:${springAiVersion}")
+	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+	
 	runtimeOnly 'com.h2database:h2'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat-runtime'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'

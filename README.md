@@ -128,5 +128,44 @@ that needs to be executed after start of server.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+How to invoke Employee JPA implementation REST API URLs to test (using RestMan tool):
+
+POST: (select POST in RestMan)
+http://localhost:8080/api/employees
+Content-Type	application/json
+{
+    "id": 103,
+    "name": "Anil",
+    "department": "IT",
+    "salary": 75000
+}
+
+
+GET:  (select GET in RestMan)
+For getting all employees details:
+http://localhost:8080/api/employees
+
+For getting single employee details:
+http://localhost:8080/api/employees/101
+
+
+DELETE: (select DELETE in RestMan)
+http://localhost:8080/api/employees/101
+
+PUT: (select PUT in RestMan)
+http://localhost:8080/api/employees/103
+Content-Type	application/json
+{
+    "id": 103,
+    "name": "Anil Kumar",
+    "department": "IT",
+    "salary": 77000
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 Use below URL to test Spring ai module which invokes open ai LLM
 http://localhost:8080/api/ai/chat

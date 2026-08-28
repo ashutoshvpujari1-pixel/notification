@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delete Employee | Employee Management</title>
+<style>
+:root {
+	--primary: #123b66;
+	--secondary: #1976d2;
+	--bg: #f4f8fc;
+	--card: #fff;
+	--text: #1f2937;
+	--muted: #64748b;
+	--border: #dbe4ee;
+	--danger: #c62828;
+	--success: #087f5b
+}
+
+* {
+	box-sizing: border-box
+}
+
+body {
+	margin: 0;
+	font-family: Inter, Segoe UI, Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text)
+}
+
+header {
+	background: linear-gradient(135deg, #0d3155, #1976d2);
+	color: #fff;
+	padding: 18px 34px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 4px 18px #0d315533
+}
+
+.brand {
+	font-size: 22px;
+	font-weight: 700
+}
+
+.subtitle {
+	font-size: 13px;
+	opacity: .85;
+	margin-top: 3px
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 14px;
+	opacity: .92
+}
+
+nav a:hover {
+	opacity: 1
+}
+
+main {
+	max-width: 1180px;
+	margin: 32px auto;
+	padding: 0 18px
+}
+
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	box-shadow: 0 8px 25px #153b5b12;
+	padding: 24px
+}
+
+h1 {
+	margin: 0 0 7px;
+	font-size: 27px
+}
+
+.lead {
+	color: var(--muted);
+	margin: 0 0 22px
+}
+
+.toolbar {
+	display: flex;
+	gap: 12px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 18px;
+	flex-wrap: wrap
+}
+
+input, select {
+	width: 100%;
+	padding: 11px 12px;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	font-size: 14px;
+	outline: none;
+	background: #fff
+}
+
+input:focus, select:focus {
+	border-color: var(--secondary);
+	box-shadow: 0 0 0 3px #1976d21a
+}
+
+.search {
+	max-width: 330px
+}
+
+.btn {
+	border: 0;
+	border-radius: 8px;
+	padding: 11px 17px;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block
+}
+
+.primary {
+	background: var(--secondary);
+	color: #fff
+}
+
+.primary:hover {
+	background: #125eaa
+}
+
+.secondary {
+	background: #e8f0f8;
+	color: var(--primary)
+}
+
+.danger {
+	background: #fff0f0;
+	color: var(--danger);
+	border: 1px solid #ffcaca
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+th, td {
+	text-align: left;
+	padding: 13px 12px;
+	border-bottom: 1px solid #e7edf3;
+	font-size: 14px
+}
+
+th {
+	background: #f6f9fc;
+	color: #40556b;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .03em
+}
+
+tr:hover td {
+	background: #fbfdff
+}
+
+.actions {
+	display: flex;
+	gap: 7px
+}
+
+.actions .btn {
+	padding: 7px 10px;
+	font-size: 12px
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+	gap: 10px
+}
+
+.pages {
+	display: flex;
+	gap: 5px
+}
+
+.page {
+	min-width: 35px;
+	padding: 8px;
+	border: 1px solid var(--border);
+	background: #fff;
+	border-radius: 7px;
+	cursor: pointer
+}
+
+.page.active {
+	background: var(--primary);
+	color: #fff
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px
+}
+
+.field label {
+	display: block;
+	font-weight: 600;
+	font-size: 13px;
+	margin-bottom: 7px
+}
+
+.full {
+	grid-column: 1/-1
+}
+
+.message {
+	margin: 16px 0;
+	padding: 11px 14px;
+	border-radius: 8px;
+	display: none
+}
+
+.ok {
+	background: #eaf8f3;
+	color: var(--success)
+}
+
+.err {
+	background: #fff1f1;
+	color: var(--danger)
+}
+
+footer {
+	text-align: center;
+	color: var(--muted);
+	font-size: 12px;
+	padding: 25px
+}
+
+@media ( max-width :700px) {
+	.form-grid {
+		grid-template-columns: 1fr
+	}
+	.full {
+		grid-column: auto
+	}
+	header {
+		padding: 16px
+	}
+	nav {
+		display: none
+	}
+	.card {
+		padding: 17px
+	}
+	table {
+		min-width: 760px
+	}
+	.table-wrap {
+		overflow: auto
+	}
+	.pagination {
+		flex-direction: column;
+		align-items: flex-start
+	}
+}
+</style>
+</head>
+<body>
+	<header>
+		<div>
+			<div class="brand">Employee Management System</div>
+			<div class="subtitle">Professional REST API CRUD Interface</div>
+		</div>
+		<nav>
+			<a href="employee-list.html">Employees</a><a href="employee-add.html">Add</a><a
+				href="employee-update.html">Update</a><a href="employee-delete.html">Delete</a>
+		</nav>
+	</header>
+	<main>
+		<section class="card">
+			<h1>Delete Employee</h1>
+			<p class="lead">Enter an employee ID and permanently remove the
+				employee using DELETE.</p>
+			<div id="msg" class="message"></div>
+			<form id="form">
+				<div class="form-grid">
+					<div class="field">
+						<label>Employee ID</label><input id="id" type="number" min="1"
+							required>
+					</div>
+					<div class="field">
+						<label>Confirmation</label><select id="confirm"><option
+								value="">Select...</option>
+							<option value="yes">Yes, delete this employee</option></select>
+					</div>
+				</div>
+				<br>
+				<button class="btn danger">Delete Employee</button>
+				<a class="btn secondary" href="employee-list.html">Cancel</a>
+			</form>
+		</section>
+	</main>
+	<footer>Employee REST API • GET • POST • PUT • DELETE</footer>
+	<script>
+const API_BASE="http://localhost:8080/api/employees";
+function show(t,ok=false){msg.textContent=t;msg.className="message "+(ok?"ok":"err");msg.style.display="block";}
+form.addEventListener("submit",async e=>{e.preventDefault();if(confirm.value!=="yes"){show("Please confirm deletion.");return}
+if(!window.confirm("Are you sure you want to permanently delete employee "+id.value+"?"))return;
+try{const r=await fetch(`${API_BASE}/${id.value}`,{method:"DELETE"});if(!r.ok)throw new Error(await r.text()||r.status);show("Employee deleted successfully.",true);form.reset()}catch(x){show("DELETE failed: "+x.message)}})
+</script>
+</body>
+</html>

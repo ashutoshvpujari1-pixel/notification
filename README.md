@@ -163,8 +163,11 @@ Content-Type	application/json
 }
 
 ----------------------------------------------------------------------------------------------------------------------------
-
-
+To invoke Employee pages to add, show employee records, update record, delete record call below URL's from your brower.
+http://localhost:8080/employee-add.html
+http://localhost:8080/employee-list.html
+http://localhost:8080/employee-update.html
+http://localhost:8080/employee-delete.html
 
 
 Use below URL to test Spring ai module which invokes open ai LLM

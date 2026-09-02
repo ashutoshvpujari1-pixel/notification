@@ -168,6 +168,7 @@ http://localhost:8080/employee-add.html
 http://localhost:8080/employee-list.html
 http://localhost:8080/employee-update.html
 http://localhost:8080/employee-delete.html
+
 ----------------------------------------------------------------------------------------------------------------------------
 If profile is configured as dev, then test using below URL:
 http://localhost:8081/environment
@@ -177,6 +178,7 @@ http://localhost:8082/environment
 
 If profile is configured as prod, then test using below URL:
 http://localhost:8083/environment
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 Use below URL to test Spring ai module which invokes open ai LLM
